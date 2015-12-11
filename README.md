@@ -9,10 +9,10 @@ This program uses following modules:
 glob
 
 Input files:
-\\begin{itemize}
-\item Any number of *.tex files
-\item Any number of bibliographic files *.bib (Mendeley is useful tool for building of those files)
-\end{itemize}
+
+1) Any number of *.tex files
+
+2) Any number of bibliographic files *.bib (Mendeley is useful tool for building of those files)
 
 Output - library_new.bib file, containing bibliographic information about sources used in *.tex files that given as input
 
