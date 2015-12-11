@@ -2,26 +2,26 @@
 '''
 \section{bibtex.py}
 
-\\hyperlink{content}{Содержание}
+\\hyperlink{content}{Content}
 
-Данная программа использует следующие модули:
+This program is intended for building of the bibtex-file for document written in LaTeX.
+It will be useful for building of one small *.bib file, with sources specific for certain article,
+from large (and sometimes not one) *.bib files of your bibliography database. Builded bibtex file
+can be sent to journal editoral board instead of large origin *.bib file
+
+This program uses following modules:
 
 glob
 
-Данная программа предназначена для создания bibtex-файла для документа, написанного
-в LaTeX-редакторе.
-
-На вход подаются следующие файлы:
+Input files:
 \\begin{itemize}
-\item Любое количество документов в виде tex-файлов (файлов с расширением .tex)
-\item Любое количество файлов библиографии системы BibTeX (файлов с расширением .bib)
-Данные файлы автоматически генерируются программой Mendeley (хотя могут создаваться и вручную)
+\item Any number of *.tex files
+\item Any number of bibliographic files *.bib (Mendeley is useful tool for building of those files)
 \end{itemize}
 
-На выходе получаем файл library\_new.bib, содержащий библиографическую информацию только о тех
-источниках, ссылки на которые делались в документе.
+Output - library_new.bib file, containing bibliographic information about sources used in *.tex files that given as input
 
-Данная программа только исполняемая
+Program is executable only
 
 \\newpage
 
@@ -30,7 +30,7 @@ glob
 from glob import glob
 
 if __name__ == '__main__':
-    # Создание списка ключей цитирования
+    # Building of the citation key's list
     list_of_tex_files = glob('*.tex')
     new_list_of_tex_files = []
     for i in list_of_tex_files: 
@@ -52,7 +52,7 @@ if __name__ == '__main__':
         exec('citation_list += list_'+i)
     exec('set_citation_list = set(citation_list)')
     exec('citation_list = list(set_citation_list)')
-    # Создание нового файла bibtex
+    # Creating of new bibtex
     bibtex_file_list = glob('*.bib')
     bibtex_dict ={}
     for ii in bibtex_file_list:
