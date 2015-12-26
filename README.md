@@ -14,6 +14,6 @@ Input files:
 
 2) Any number of bibliographic files *.bib (Mendeley is useful tool for building of those files)
 
-Output - library_new.bib file, containing bibliographic information about sources used in *.tex files that given as input
+Output - library_new.bib file, containing bibliographic information about sources used in *.tex files that given as input only
 
 Program is executable only
