@@ -4,6 +4,8 @@ It will be useful for building of one small *.bib file, with sources specific fo
 from large (and sometimes not one) *.bib files of your bibliography database. Builded bibtex file
 can be sent to journal editoral board instead of large origin *.bib file
 
+Requirements: python3 
+
 This program uses following modules:
 
 glob
