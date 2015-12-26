@@ -6,6 +6,8 @@ can be sent to journal editoral board instead of large origin *.bib file
 
 Requirements: python3 
 
+Metal forever
+
 This program uses following modules:
 
 glob
