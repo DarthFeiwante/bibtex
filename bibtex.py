@@ -49,6 +49,15 @@ if __name__ == '__main__':
                         exec('list_'+i+'+= iii')
                         exec('set_list = set(list_'+i+')')
                         exec('list_'+i+' = list(set_list)')
+            if '\citep{' in line: 
+                l = line.split('\citep')
+                for ii in l:
+                    if ii[0] == '{':
+                        iii = ii[1:ii.index("}")].split(',')
+                        iii = [e.replace(' ', '') for e in iii]
+                        exec('list_'+i+'+= iii')
+                        exec('set_list = set(list_'+i+')')
+                        exec('list_'+i+' = list(set_list)')
         exec('citation_list += list_'+i)
     exec('set_citation_list = set(citation_list)')
     exec('citation_list = list(set_citation_list)')
